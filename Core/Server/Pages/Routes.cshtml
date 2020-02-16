@@ -1,0 +1,88 @@
+﻿@page
+@using Microsoft.AspNetCore.Mvc.ApplicationModels
+@using Microsoft.AspNetCore.Mvc.RazorPages
+@using Microsoft.AspNetCore.Routing
+@using Microsoft.AspNetCore.Mvc.ActionConstraints
+@using Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure
+@inject EndpointDataSource EndpointsDataSource
+
+@{
+  var endpoints = EndpointsDataSource.Endpoints.ToList();
+}
+<title>Routes</title>
+<table class="table" style="border:solid; border-collapse: collapse;">
+  <thead class="thead-dark">
+    <tr>
+      <th style="border:solid" scope="col">Order</th>
+      <th style="border:solid" scope="col">Display Name</th>
+      <th style="border:solid" scope="col">Route Pattern</th>
+      <th style="border:solid" scope="col">Metadata</th>
+    </tr>
+  </thead>
+  <tbody style="border:solid">
+    @foreach (var endpoint in endpoints)
+    {
+      var routeEndpoint = endpoint as RouteEndpoint;
+      <tr>
+        <td style="border: solid">@routeEndpoint?.Order</td>
+        <td style="border:solid">@endpoint.DisplayName</td>
+        <td style="border:solid">@routeEndpoint?.RoutePattern.RawText</td>
+        <td style="border:solid">
+          <ul>
+            @foreach (var metaModel in endpoint.Metadata)
+            {
+              switch (metaModel)
+              {
+                case PageRouteMetadata prm:
+                  <li>
+                    <p>@nameof(PageRouteMetadata)</p>
+                    <ul>
+                      <li>Page Route: @prm.PageRoute</li>
+                      <li>Route Template: @prm.RouteTemplate </li>
+                    </ul>
+                  </li>
+                  break;
+                case PageActionDescriptor pad:
+                  <li>
+                    <p>@nameof(PageActionDescriptor)</p>
+                    <ul>
+                      <li>Id: @pad.Id</li>
+                      <li>Area: @pad.AreaName</li>
+                      <li>Display Name: @pad.DisplayName</li>
+                      <li>View Engine Path: @pad.ViewEnginePath</li>
+                      <li>Relative Path: @pad.RelativePath</li>
+                    </ul>
+                  </li>
+                  break;
+                case RouteNameMetadata rnm:
+                  <li>
+                    Route Name Metadata: @rnm.RouteName
+                  </li>
+                  break;
+                case SuppressLinkGenerationMetadata slg:
+                  <li>
+                    Suppress link: @slg.SuppressLinkGeneration;
+                  </li>
+                  break;
+                case HttpMethodActionConstraint hmac:
+                  <li>
+                    Http Methods:
+                    <ul>
+                      @foreach (var method in hmac.HttpMethods)
+                      {
+                        <li>@method</li>
+                      }
+                    </ul>
+                  </li>
+                  break;
+                default:
+                  <li>@metaModel.GetType().Name</li>
+                  break;
+              }
+            }
+          </ul>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>

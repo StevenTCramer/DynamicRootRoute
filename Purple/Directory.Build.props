@@ -1,0 +1,52 @@
+<Project>
+  <!-- Set common properties regarding assembly information and nuget packages -->
+  
+  <PropertyGroup>
+    <Authors>Steven T. Cramer</Authors>
+    <Product>Purple</Product>
+  </PropertyGroup>
+
+  <!-- Common compile parameters -->
+  <PropertyGroup>
+    <Nullable>disable</Nullable>
+    <LangVersion>preview</LangVersion>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <!-- We use full (Windows PDBs) until cross platform support for source link will get better -->
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <TestProjectTargetFramework>netstandard2.1</TestProjectTargetFramework>
+  </PropertyGroup>
+
+  <!--Versions of packages used across the solution-->
+  <PropertyGroup Label="Package Versions">
+    <MicrosoftAspNetCoreBlazorVersion>3.2.0-preview1.20073.1</MicrosoftAspNetCoreBlazorVersion>
+    <MicrosoftAspNetCoreBlazorVersion>$(MicrosoftAspNetCoreBlazorVersion)</MicrosoftAspNetCoreBlazorVersion>
+    <MicrosoftAspNetCoreBlazorBuildVersion>$(MicrosoftAspNetCoreBlazorVersion)</MicrosoftAspNetCoreBlazorBuildVersion>
+    <MicrosoftAspNetCoreBlazorHttpClientVersion>$(MicrosoftAspNetCoreBlazorVersion)</MicrosoftAspNetCoreBlazorHttpClientVersion>
+    <MicrosoftAspNetCoreBlazorServerVersion>$(MicrosoftAspNetCoreBlazorVersion)</MicrosoftAspNetCoreBlazorServerVersion>
+    
+    <MicrosoftAspNetCoreVersion>3.1.1</MicrosoftAspNetCoreVersion>    
+    <MicrosoftAspNetCoreMvcTestingVersion>$(MicrosoftAspNetCoreVersion)</MicrosoftAspNetCoreMvcTestingVersion>
+    <MicrosoftAspNetCoreTestHostVersion>$(MicrosoftAspNetCoreVersion)</MicrosoftAspNetCoreTestHostVersion>
+    <MicrosoftCodeAnalysisFxCopAnalyzersVersion>2.9.8</MicrosoftCodeAnalysisFxCopAnalyzersVersion>
+
+    <BlazorStateVersion>3.2.0</BlazorStateVersion>
+    <BlazorExtensionsLoggingVersion>0.4.0</BlazorExtensionsLoggingVersion>
+    <DawnGuardVersion>1.10.0</DawnGuardVersion>
+    <FixieVersion>2.2.0</FixieVersion>
+    <FixieConsoleVersion>2.1.1</FixieConsoleVersion>
+    <MediatrExtensionsMicrosoftDependencyInjectionVersion>8.0.0</MediatrExtensionsMicrosoftDependencyInjectionVersion>
+    <MediatrVersion>8.0.0</MediatrVersion>
+    <MoqVersion>4.13.1</MoqVersion>
+    <ScrutorVersion>3.1.0</ScrutorVersion>
+    <SeleniumSupportVersion>3.141.0</SeleniumSupportVersion>
+    <SeleniumWebDriverVersion>3.141.0</SeleniumWebDriverVersion>
+    <ShouldlyVersion>3.0.2</ShouldlyVersion>
+    <SystemTextJsonVersion>4.7.0</SystemTextJsonVersion>
+
+  </PropertyGroup>
+</Project>

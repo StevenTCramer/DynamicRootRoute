@@ -1,0 +1,87 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28606.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{2902FDFD-016E-4BF7-8B41-53D674FA53DD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Purple.Api", "Source\Api\Purple.Api.csproj", "{C2F433E6-FB14-42CE-AA08-ABC868458911}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Purple.Server", "Source\Server\Purple.Server.csproj", "{8D5BB95D-E57D-4502-820C-7688D8FBBFA5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Purple.Client", "Source\Client\Purple.Client.csproj", "{D95E2521-03E2-4E64-A559-15D2CA7E700E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Purple.Client.Integration.Tests", "Tests\Client.Integration.Tests\Purple.Client.Integration.Tests.csproj", "{572B6E2B-AB52-4AB8-9C43-D32B69383984}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Purple.EndToEnd.Selenium.Tests", "Tests\EndToEnd.Selenium.Tests\Purple.EndToEnd.Selenium.Tests.csproj", "{A77EBD68-7E2B-44AB-A8DA-D0AD2F5B7C65}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Purple.Server.Integration.Tests", "Tests\Server.Integration.Tests\Purple.Server.Integration.Tests.csproj", "{E0E6731B-D7C6-4186-B9A8-109B93C29C5C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Purple.EndToEnd.TestCafe.Tests", "Tests\EndToEnd.TestCafe.Tests\Purple.EndToEnd.TestCafe.Tests.csproj", "{6E935467-2E35-4994-B3D2-A31A9D833DE5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6B623CDC-91E7-47FD-A039-A40427FB7FE8}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		CodeMaid.config = CodeMaid.config
+		Directory.Build.props = Directory.Build.props
+		NuGet.config = NuGet.config
+		README.md = README.md
+		Run.ps1 = Run.ps1
+		TestCafe.ps1 = TestCafe.ps1
+		UNLICENSE.md = UNLICENSE.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{6DDDEA23-D242-4AB1-92E0-967A60941A81}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\Build\Purple.Template.yml = ..\..\..\..\Build\Purple.Template.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C2F433E6-FB14-42CE-AA08-ABC868458911}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2F433E6-FB14-42CE-AA08-ABC868458911}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2F433E6-FB14-42CE-AA08-ABC868458911}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2F433E6-FB14-42CE-AA08-ABC868458911}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D5BB95D-E57D-4502-820C-7688D8FBBFA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D5BB95D-E57D-4502-820C-7688D8FBBFA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D5BB95D-E57D-4502-820C-7688D8FBBFA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D5BB95D-E57D-4502-820C-7688D8FBBFA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D95E2521-03E2-4E64-A559-15D2CA7E700E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D95E2521-03E2-4E64-A559-15D2CA7E700E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D95E2521-03E2-4E64-A559-15D2CA7E700E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D95E2521-03E2-4E64-A559-15D2CA7E700E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{572B6E2B-AB52-4AB8-9C43-D32B69383984}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{572B6E2B-AB52-4AB8-9C43-D32B69383984}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{572B6E2B-AB52-4AB8-9C43-D32B69383984}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{572B6E2B-AB52-4AB8-9C43-D32B69383984}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A77EBD68-7E2B-44AB-A8DA-D0AD2F5B7C65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A77EBD68-7E2B-44AB-A8DA-D0AD2F5B7C65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A77EBD68-7E2B-44AB-A8DA-D0AD2F5B7C65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A77EBD68-7E2B-44AB-A8DA-D0AD2F5B7C65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0E6731B-D7C6-4186-B9A8-109B93C29C5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0E6731B-D7C6-4186-B9A8-109B93C29C5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0E6731B-D7C6-4186-B9A8-109B93C29C5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0E6731B-D7C6-4186-B9A8-109B93C29C5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E935467-2E35-4994-B3D2-A31A9D833DE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E935467-2E35-4994-B3D2-A31A9D833DE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E935467-2E35-4994-B3D2-A31A9D833DE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E935467-2E35-4994-B3D2-A31A9D833DE5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{572B6E2B-AB52-4AB8-9C43-D32B69383984} = {2902FDFD-016E-4BF7-8B41-53D674FA53DD}
+		{A77EBD68-7E2B-44AB-A8DA-D0AD2F5B7C65} = {2902FDFD-016E-4BF7-8B41-53D674FA53DD}
+		{E0E6731B-D7C6-4186-B9A8-109B93C29C5C} = {2902FDFD-016E-4BF7-8B41-53D674FA53DD}
+		{6E935467-2E35-4994-B3D2-A31A9D833DE5} = {2902FDFD-016E-4BF7-8B41-53D674FA53DD}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {16FA64C2-4A0E-42D4-94E6-C8CFDE84597E}
+	EndGlobalSection
+EndGlobal
